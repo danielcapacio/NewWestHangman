@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="a00957203.comp3717.bcit.ca.new_west_hangman.MainActivity">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        app:srcCompat="@drawable/newwestlogo1"
+        android:layout_alignParentStart="true" />
+
+    <ImageView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        app:srcCompat="@drawable/titlefixed"
+        android:layout_below="@+id/imageView"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true" />
+
+    <ImageView
+        android:id="@+id/blocks"
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        app:srcCompat="@drawable/blocks"
+        android:layout_above="@+id/buttonStart"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="11dp"
+        android:layout_below="@+id/title" />
+
+    <Button
+        android:text="1-PLAYER"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="startSinglePlayerGame"
+        android:id="@+id/buttonStart"
+        android:background="@android:color/black"
+        android:textColor="@android:color/white"
+        android:textAlignment="gravity"
+        android:minWidth="150dp"
+        android:layout_marginBottom="12dp"
+        android:layout_above="@+id/buttonMulti"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:text="2-PLAYER"
+        android:onClick="startMultiPlayerGame"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/buttonMulti"
+        android:background="@android:color/black"
+        android:textColor="@android:color/white"
+        android:textAlignment="gravity"
+        android:minWidth="150dp"
+        android:layout_above="@+id/buttonScores"
+        android:layout_alignStart="@+id/buttonStart"
+        android:layout_marginBottom="12dp" />
+
+    <Button
+        android:text="SCORES"
+        android:onClick="openScores"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/buttonScores"
+        android:background="@android:color/black"
+        android:textColor="@android:color/white"
+        android:textAlignment="gravity"
+        android:minWidth="150dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/buttonMulti" />
+</RelativeLayout>
